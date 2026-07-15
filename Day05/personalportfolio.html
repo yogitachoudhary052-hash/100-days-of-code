@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#00B4DB,#0083B0,#6DD5FA);
+    background-size:300% 300%;
+    animation:gradient 10s ease infinite;
+    color:white;
+}
+
+@keyframes gradient{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+
+text-align:center;
+
+padding:20px 20px;
+
+}
+
+header h1{
+
+font-size:55px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+}
+
+header p{
+
+font-size:22px;
+
+margin-top:10px;
+
+opacity:.9;
+
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+nav{
+
+display:flex;
+
+justify-content:flex-end;
+
+align-items:center;
+
+gap:35px;
+
+padding:20px 60px;
+
+position:sticky;
+
+top:0;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#FFD93D;
+
+}
+
+/* ==========================
+   SECTION
+========================== */
+
+section,
+aside{
+
+width:90%;
+
+max-width:1100px;
+
+margin:40px auto;
+
+padding:35px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(15px);
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+transition:.4s;
+
+}
+
+section:hover,
+aside:hover{
+
+transform:translateY(-8px);
+
+}
+
+/* ==========================
+   PROFILE
+========================== */
+
+#summary{
+
+text-align:center;
+
+}
+
+#summary img{
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid white;
+
+box-shadow:0 0 30px rgba(255,255,255,.5);
+
+transition:.4s;
+
+}
+
+#summary img:hover{
+
+transform:scale(1.08);
+
+}
+
+/* ==========================
+   HEADINGS
+========================== */
+
+h2{
+
+font-size:34px;
+
+margin:25px 0;
+
+color:#FFD93D;
+
+}
+
+/* ==========================
+   PARAGRAPH
+========================== */
+
+p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+/* ==========================
+   SKILLS
+========================== */
+
+ul{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+list-style:none;
+
+margin-top:20px;
+
+}
+
+li{
+
+background:white;
+
+color:#0083B0;
+
+padding:12px 25px;
+
+border-radius:30px;
+
+font-weight:600;
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+li:hover{
+
+background:#FFD93D;
+
+transform:translateY(-5px);
+
+}
+
+/* ==========================
+   PROJECTS
+========================== */
+
+article{
+
+background:rgba(255,255,255,.15);
+
+padding:25px;
+
+margin-top:20px;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+article:hover{
+
+background:rgba(255,255,255,.3);
+
+transform:scale(1.02);
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+button{
+
+margin-top:20px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:30px;
+
+font-size:18px;
+
+font-weight:600;
+
+background:#FFD93D;
+
+color:#222;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:white;
+
+transform:scale(1.05);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+margin-top:60px;
+
+padding:25px;
+
+text-align:center;
+
+background:rgba(255,255,255,.15);
+
+font-size:18px;
+
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#FFD93D;
+
+border-radius:20px;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:38px;
+
+}
+
+header p{
+
+font-size:18px;
+
+}
+
+nav{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+padding:15px;
+
+gap:20px;
+
+}
+
+#summary img{
+
+width:170px;
+
+height:170px;
+
+}
+
+section,
+aside{
+
+padding:20px;
+
+}
+
+h2{
+
+font-size:28px;
+
+}
+
+
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yogita Choudhary</h1>
+        <p>Aspiring Full Stack Developer</p>
+    </header>
+    <nav>
+        <a href="file:///C:/Users/HP/Documents/Developer%20journey/100-days-of-code/Day05/summary.html">Summary</a>
+        <a href="file:///C:/Users/HP/Documents/Developer%20journey/100-days-of-code/Day05/skills.html">Skills</a>
+        <a href="file:///C:/Users/HP/Documents/Developer%20journey/100-days-of-code/Day05/education.html">Education</a>
+        <a href="file:///C:/Users/HP/Documents/Developer%20journey/100-days-of-code/Day05/contact.html">Contact</a>
+    </nav>
+
+    <section id="summary">
+        <img src="C:\Users\HP\Documents\Yogita\59516aaa-2514-4f96-a340-c8b1199aaa2f.png" height="400px" width="300px">
+        <h2>Summary :  </h2>
+ 
+    <p> I am a passionate web developer currently learning
+        Full Stack Development. I enjoy building websites
+        using HTML, CSS, JavaScript, PHP, and MySQL.</p>
+    </section>
+
+
+    <section id="education">
+
+<h2>Education : </h2>
+
+<ul>
+<li>B.Com - Maharaja Sayajirao University</li>
+<li>PGDCA - Maharaja Sayajirao University</li>
+
+</ul>
+
+</section>
+
+
+<section id="skills">
+    <h2>Skills : </h2>
+<ul>
+    <li>HTML</li>
+ <li>CSS</li>
+ <li>JavaScript</li>
+ <li>SQL</li>
+ <li>PHP</li>
+ <li>Java</li>
+ <li>Communication</li>
+ <li>Quick learner</li>
+ <li>Good listner</li>
+</ul>
+</section>
+<section id="projects">
+    <h2>Project : </h2>
+    <article>
+        <h3>Taxi Booking Service : </h3>
+        <p>
+Taxi Booking Service is a web-based application built using PHP, MySQL, HTML, CSS, and JavaScript. The system enables users to register, log in, check vehicle availability, and book taxis online. It is designed for users in Vadodara, with taxi services operating across Gujarat. The application also provides recommendations for popular tourist destinations within Gujarat.
+</p>
+<br><br>
+<a href="https://chalotravels.freehosting.dev/?i=1">Live Website</a>
+
+    </article>
+</section>
+
+<section id="contact">
+    <h2>Contact : </h2>
+    <p>Email : yogitachoudhary052@gmail.com</p>
+    <p>Phone : +91 7779024533</p>
+    <p>GitHub : <a href="https://github.com/yogitachoudhary052-hash">GitHub Profile Link</a></p>
+</section>
+
+<aside>
+
+<h2>Currently Learning : </h2>
+
+<ul>
+
+<li>HTML5</li>
+
+<li>CSS3</li>
+
+<li>JavaScript</li>
+
+<li>Git & GitHub</li>
+
+</ul>
+
+</aside>
+
+
+<footer>
+    <p>© 2026 Yogita Choudhary</p>
+</footer>
+
+</body>
+</html>

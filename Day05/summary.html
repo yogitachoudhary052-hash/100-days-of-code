@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#00B4DB,#0083B0,#6DD5FA);
+
+    background-size:300% 300%;
+
+    animation:bg 10s ease infinite;
+
+    color:white;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* Background Animation */
+
+@keyframes bg{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* Summary Card */
+
+.summary-container{
+
+    width:50%;
+
+    max-width:900px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:20px;
+
+    padding:50px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+    transition:.4s;
+
+}
+
+.summary-container:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* Heading */
+
+h2{
+
+    text-align:center;
+
+    font-size:30px;
+
+    color:#FFD93D;
+
+    margin-bottom:30px;
+
+    position:relative;
+
+}
+
+/* Underline */
+
+h2::after{
+
+    content:"";
+
+    width:120px;
+
+    height:4px;
+
+    background:#FFD93D;
+
+    display:block;
+
+    margin:12px auto;
+
+    border-radius:20px;
+
+}
+
+/* Paragraph */
+
+p{
+
+    font-size:19px;
+
+    line-height:2;
+
+    text-align:justify;
+
+}
+
+/* Highlight Name */
+
+span{
+
+    color:#FFD93D;
+
+    font-weight:700;
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.summary-container{
+
+padding:25px;
+
+}
+
+h2{
+
+font-size:30px;
+
+}
+
+p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+}
+    </style>
+</head>
+<body>
+    <h2>Summary:</h2>
+    <p>Hi, I'm Yogita Choudhary, an aspiring Full Stack Developer with a passion for building clean, responsive, and user-friendly web applications. I have a solid foundation in HTML, CSS, JavaScript, PHP, MySQL, and Java, and I'm continuously enhancing my skills by learning modern web technologies. I enjoy solving problems, exploring new tools, and developing projects that improve my practical experience. My goal is to grow as a professional developer and contribute to innovative software solutions.</p>
+</body>
+</html>
